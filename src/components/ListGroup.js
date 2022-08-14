@@ -1,33 +1,55 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const ListGroup = () => {
   return (
     <div className="list-group">
-      <Link to="/" className="list-group-item list-group-item-action active" aria-current="true">
-        <div className="d-flex w-100 justify-content-between">
-          <h5 className="mb-1">List group item heading</h5>
-          <small>3 days ago</small>
+
+
+      <Link to="/" className="list-group-item list-group-item-action active py-3" aria-current="true">
+        <div className="d-flex w-100 justify-content-between mb-1">
+          <p className="fs-3 mb-0">Chapter Assignment 2</p>
+          <p className="text-3 fs-3 mb-0">4 hrs ago</p>
         </div>
-        <p className="mb-1">Some placeholder content in a paragraph.</p>
-        <small>And some small print.</small>
-      </Link>
-      <Link to="/" className="list-group-item list-group-item-action">
-        <div className="d-flex w-100 justify-content-between">
-          <h5 className="mb-1">List group item heading</h5>
-          <small className="text-muted">3 days ago</small>
+        <div className="d-flex justify-content-between">
+          <p className="fw-bold mb-0">Please check this file…</p>
+          <p className="text-muted fs-3 mb-0">Emily Wang</p>
         </div>
-        <p className="mb-1">Some placeholder content in a paragraph.</p>
-        <small className="text-muted">And some muted small print.</small>
       </Link>
-      <Link to="/" className="list-group-item list-group-item-action">
-        <div className="d-flex w-100 justify-content-between">
-          <h5 className="mb-1">List group item heading</h5>
-          <small className="text-muted">3 days ago</small>
+
+      <Link to="/" className="list-group-item list-group-item-action py-3" aria-current="true">
+        <div className="d-flex w-100 justify-content-between mb-1">
+          <p className="fs-3 mb-0">Chapter Assignment 1</p>
+          <p className="text-3 fs-3 mb-0">12 hrs ago</p>
         </div>
-        <p className="mb-1">Some placeholder content in a paragraph.</p>
-        <small className="text-muted">And some muted small print.</small>
+        <div className="d-flex justify-content-between">
+          <p className="fw-bold mb-0">My Homework</p>
+          <p className="text-muted fs-3 mb-0">David Xu</p>
+        </div>
       </Link>
+
+      <Link to="/" className="list-group-item list-group-item-action py-3" aria-current="true">
+        <div className="d-flex w-100 justify-content-between mb-1">
+          <p className="fs-3 mb-0">Final Assignment</p>
+          <p className="text-3 fs-3 mb-0">18 hrs ago</p>
+        </div>
+        <div className="d-flex justify-content-between">
+          <p className="fw-bold mb-0">Have a problem with this…</p>
+          <p className="text-muted fs-3 mb-0">Tony Wei</p>
+        </div>
+      </Link>
+      <Link to="/" className="list-group-item list-group-item-action py-3" aria-current="true">
+        <div className="d-flex w-100 justify-content-between mb-1">
+          <p className="fs-3 mb-0">Final Assignment</p>
+          <p className="text-3 fs-3 mb-0">19 hrs ago</p>
+        </div>
+        <div className="d-flex justify-content-between">
+          <p className="fw-bold mb-0">Did I do it right?</p>
+          <p className="text-muted fs-3 mb-0">Christina Lin</p>
+        </div>
+      </Link>
+
+  
     </div>
 
   )
