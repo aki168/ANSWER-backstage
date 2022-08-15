@@ -1,8 +1,8 @@
-import {useState} from 'react'
+// import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '@mdi/react'
-import { mdiMagnify, mdiBellRing, mdiArrowDown, mdiEye, mdiPencil } from '@mdi/js'
-import { useEffect } from 'react'
+import { mdiMagnify, mdiBellRing, mdiArrowDown, mdiEye, mdiPencil,mdiChevronRight, mdiChevronLeft } from '@mdi/js'
+// import { useEffect } from 'react'
 
 const Admin = () => {
 
@@ -45,7 +45,9 @@ const Admin = () => {
           </Link>
         </div>
       </nav>
+
       <section className="px-6 py-4">
+
         <table className="table">
           <thead>
             <tr>
@@ -61,13 +63,13 @@ const Admin = () => {
           </thead>
           <tbody>
 
-            {userData.map((item,i) => (
+            {userData.map((item, i) => (
               <tr key={i}>
-                <th scope="row">{item.ID}</th>
-                <td>{item.Name}</td>
-                <td>{item.Email}</td>
-                <td>{item.Verified}</td>
-                <td>
+                <th className="py-3" scope="row">{item.ID}</th>
+                <td className="py-3">{item.Name}</td>
+                <td className="py-3">{item.Email}</td>
+                <td className="py-3">{item.Verified}</td>
+                <td className="pe-0 text-end">
                   <Icon path={mdiEye} size={1} className="text-dark me-6" />
                   <Icon path={mdiPencil} size={1} className="text-dark" />
                 </td>
@@ -76,6 +78,25 @@ const Admin = () => {
 
           </tbody>
         </table>
+
+        <nav aria-label="Page navigation ">
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <Icon path={mdiChevronLeft} width="20"  />
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <Icon path={mdiChevronRight} width="20"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
       </section>
 
     </>

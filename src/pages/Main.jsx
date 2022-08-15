@@ -22,10 +22,10 @@ const Main = () => {
           </select>
         </div>
         <div className="col-6 d-flex justify-content-end">
-          <Link className="me-6" to="">
+          <Link className="me-6" to="/">
             <Icon path={mdiMagnify} size={1} className="text-dark" />
           </Link>
-          <Link to="">
+          <Link to="/">
             <Icon path={mdiBellRing} size={1} className="text-success" />
           </Link>
         </div>
@@ -44,19 +44,9 @@ const Main = () => {
         </div>
         <div className="col-8">
           <ListCard />
-        <footer className='d-flex mt-5 justify-content-between'>
-        <div>
-          <Icon path={mdiChevronLeft} size={1} className="text-dark me-5" />
-          <Icon path={mdiChevronRight} size={1} className="text-dark" />
-        </div>
-        <div>
-          <input type="button" value="Mark as read" className='btn px-8 btn-outline-success me-4' />
-          <input type="button" value="Reply" className='btn px-8 btn-success' />
-        </div>
-      </footer>
         </div>
 
-
+      
 
       </div>
 

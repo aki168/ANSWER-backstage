@@ -1,8 +1,12 @@
-import { mdiDotsVertical, mdiPaperclip } from '@mdi/js'
+import { mdiDotsVertical, mdiPaperclip, mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import Icon from '@mdi/react'
-import React from 'react'
+import {useState} from 'react'
+import Editor from './Editor'
 
 const ListCard = () => {
+
+  const [ editor , setEditor ] = useState(false)
+
   return (
     <div>
       <p className="text-secondary text-end mb-2">2 comments</p>
@@ -40,6 +44,7 @@ const ListCard = () => {
             </div>
           </li>
 
+{ !editor? 
           <li className="list-group-item border-0 ps-4 pe-8">
             <div className="row">
               <div className="col-1 py-4">
@@ -61,9 +66,29 @@ const ListCard = () => {
               </article>
             </div>
           </li>
-        </ul>
+:
+<Editor />
+}
+</ul>
 
       </div>
+
+      { editor || 
+      <footer className='d-flex mt-5 justify-content-between'>
+        <div>
+          <Icon path={mdiChevronLeft} size={1} className="text-dark me-5" />
+          <Icon path={mdiChevronRight} size={1} className="text-dark" />
+        </div>
+        <div>
+          <input type="button" value="Mark as read" className='btn px-8 btn-outline-success me-4' />
+          <input 
+          type="button" value="Reply" onClick={()=> setEditor(prev => !prev)}
+          className='btn px-8 btn-success'
+          />
+        </div>
+      </footer>
+      }
+      
     </div>
   )
 }
