@@ -67,7 +67,7 @@ const ListCard = () => {
             </div>
           </li>
 :
-<Editor />
+<Editor editor={editor} setEditor={setEditor}/>
 }
 </ul>
 

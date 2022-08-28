@@ -21,9 +21,9 @@ const editorConfiguration = {
 // { name: 'others', groups: [ 'others' ] },
 // { name: 'about', groups: [ 'about' ] }
 
-const Editor = () => {
+const Editor = ({editor,setEditor}) => {
 
-    const [ editor , setEditor ] = useState(false)
+    // const [ editor , setEditor ] = useState(false)
 
     return (
         <div className="Editor">
@@ -46,7 +46,7 @@ const Editor = () => {
                     console.log('Focus.', editor);
                 }}
             />
-            <div>
+            <div className="d-flex justify-content-end py-5 pe-4">
                 <input type="button" value="Cancel" className='btn px-8 btn-outline-success me-4' onClick={()=>setEditor(prev=>!prev)} />
                 <input
                     type="button" value="Reply" className='btn px-8 btn-success'/>

@@ -33,7 +33,7 @@ const Main = () => {
     {/* 下方主畫面 */}
       <div className="container row">
         <div className="col-4">
-        <select className="form-select form-select-sm border-0 fs-4 w-25"
+        <select className="form-select form-select-sm border-0 fs-4 w-50"
             name="AllCourses" id="AllCourses" >
             <option selected disabled={true} >All (4)</option>
             <option value="React">React</option>

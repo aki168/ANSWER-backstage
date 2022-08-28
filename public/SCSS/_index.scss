@@ -10,3 +10,13 @@
 ul{
   list-style-type:disc;
 }
+
+.ck-editor__editable_inline{
+  min-height: 260px;
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){
+  border-bottom:none;
+  border-left:none;
+  border-right:none;
+}

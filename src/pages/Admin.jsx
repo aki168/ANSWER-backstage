@@ -1,10 +1,18 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '@mdi/react'
-import { mdiMagnify, mdiBellRing, mdiArrowDown, mdiEye, mdiPencil,mdiChevronRight, mdiChevronLeft } from '@mdi/js'
+import MyModal from '../components/Modal'
+import { mdiMagnify, mdiBellRing, mdiArrowDown, mdiEye, mdiPencil, mdiChevronRight, mdiChevronLeft } from '@mdi/js'
+
 // import { useEffect } from 'react'
 
 const Admin = () => {
+
+  const [modalShow, setModalShow] = useState(false);
+  const toggleModal = (e) => {
+    e.preventDefault()
+    setModalShow(prev=>!prev)
+  }
 
   const userData = [
     { ID: "#1", Name: "Emir Wicks", Email: "emir.wicks@mail.com", Verified: "Yes" },
@@ -70,8 +78,13 @@ const Admin = () => {
                 <td className="py-3">{item.Email}</td>
                 <td className="py-3">{item.Verified}</td>
                 <td className="pe-0 text-end">
-                  <Icon path={mdiEye} size={1} className="text-dark me-6" />
-                  <Icon path={mdiPencil} size={1} className="text-dark" />
+                  <a href="!#" onClick={toggleModal} className=''>
+                    <Icon path={mdiEye} size={1}
+                    className="text-dark me-6" />
+                  </a>
+                  
+                  <Icon path={mdiPencil} size={1}
+                    className="text-dark" />
                 </td>
               </tr>
             ))}
@@ -79,11 +92,13 @@ const Admin = () => {
           </tbody>
         </table>
 
+        <MyModal show={modalShow} onHide={toggleModal}/>
+
         <nav aria-label="Page navigation ">
           <ul class="pagination justify-content-end">
             <li class="page-item">
               <a class="page-link" href="#">
-                <Icon path={mdiChevronLeft} width="20"  />
+                <Icon path={mdiChevronLeft} width="20" />
               </a>
             </li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -91,7 +106,7 @@ const Admin = () => {
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
               <a class="page-link" href="#">
-                <Icon path={mdiChevronRight} width="20"/>
+                <Icon path={mdiChevronRight} width="20" />
               </a>
             </li>
           </ul>
