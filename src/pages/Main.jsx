@@ -42,12 +42,9 @@ const Main = () => {
           </select>
           <ListGroup />
         </div>
-        <div className="col-8">
+        <div className="col-8 pb-8">
           <ListCard />
         </div>
-
-      
-
       </div>
 
 

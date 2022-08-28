@@ -20,7 +20,7 @@ export default function Navbar() {
   
   
   return (//flex-shrink-0
-    <nav className="d-flex flex-column col-3 py-8 ps-0 bg-light vh-100" >
+    <nav className="d-flex flex-column col-3 py-8 ps-0 bg-light min-vh-100" >
 
       <Link to="/" className="d-flex align-items-center mb-8 ps-8">
         <img src="images/logo-ANSWER.svg" alt="LOGO" />
