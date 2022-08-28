@@ -1,0 +1,22 @@
+// 載入字體
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.form-select {
+  // 客制化下拉選單icon箭頭
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='green' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m2 5 6 6 6-6'/></svg>");
+  background-size: 16px;
+}
+
+ul{
+  list-style-type:disc;
+}
+
+.ck-editor__editable_inline{
+  min-height: 260px;
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){
+  border-bottom:none;
+  border-left:none;
+  border-right:none;
+}
