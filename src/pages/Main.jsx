@@ -6,6 +6,9 @@ import ListGroup from '../components/ListGroup'
 import ListCard from '../components/ListCard'
 
 const Main = () => {
+
+  const path = "https://raw.githubusercontent.com/aki168/ANSWER-backstage/main/public/images/";
+
   return (
     <>
     {/* 上方導覽列 */}
@@ -43,7 +46,7 @@ const Main = () => {
           <ListGroup />
         </div>
         <div className="col-8 pb-8">
-          <ListCard />
+          <ListCard imgPath={path}/>
         </div>
       </div>
 

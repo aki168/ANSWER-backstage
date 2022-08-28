@@ -10,7 +10,6 @@ const MyModal = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      {/* < onClick={props.onHide}/> */}
 
       <Modal.Body>
         <section className='d-flex p-3'>
@@ -18,7 +17,7 @@ const MyModal = (props) => {
             style={{
               width: "140px",
               height: "140px",
-              backgroundImage: "url('images/emir.jpeg')",
+              backgroundImage: `url('${props.img}')`,
               backgroundPosition: "center center",
               backgroundSize: "cover"
             }}

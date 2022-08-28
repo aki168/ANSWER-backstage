@@ -3,7 +3,7 @@ import Icon from '@mdi/react'
 import {useState} from 'react'
 import Editor from './Editor'
 
-const ListCard = () => {
+const ListCard = ({imgPath}) => {
 
   const [ editor , setEditor ] = useState(false)
 
@@ -24,7 +24,7 @@ const ListCard = () => {
           <li className="list-group-item border-0 ps-4 pe-8">
             <div className="row">
               <div className="col-1 py-4">
-                <img className="rounded-circle " width="40" height="40" src="images/emilywang.jpeg" alt="user" />
+                <img className="rounded-circle " width="40" height="40" src={`${imgPath}emilywang.jpeg`} alt="user" />
               </div>
               <article className='col-11 border-bottom py-4'>
                 <h5 className="fw-bold">Emily Wang</h5>
@@ -48,7 +48,7 @@ const ListCard = () => {
           <li className="list-group-item border-0 ps-4 pe-8">
             <div className="row">
               <div className="col-1 py-4">
-                <img className="rounded-circle " width="40" height="40" src="images/andychen.jpeg" alt="user" />
+                <img className="rounded-circle " width="40" height="40" src={`${imgPath}andychen.jpeg`} alt="user" />
               </div>
               <article className='col-11 py-4'>
                 <h5 className="fw-bold">Andy Chen (You)</h5>

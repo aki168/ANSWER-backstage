@@ -22,7 +22,7 @@ export default function Navbar() {
   return (//flex-shrink-0
     <nav className="d-flex flex-column col-3 py-8 ps-0 bg-light min-vh-100" >
 
-      <Link to="/" className="d-flex align-items-center mb-8 ps-8">
+      <Link to="/ANSWER-backstage" className="d-flex align-items-center mb-8 ps-8">
         <img src="images/logo-ANSWER.svg" alt="LOGO" />
       </Link>
 
@@ -38,7 +38,7 @@ export default function Navbar() {
 
         <li className={`nav-item border-start border-4 border-${toggleState==="question" ? "success" : "light" } mb-6`} 
           onClick={() => addStyle("question")}>
-          <Link to="/" className={`nav-link fw-bold link-${toggleState==="question" ? "success" : "dark" } ps-8`} aria-current="page">
+          <Link to="/ANSWER-backstage" className={`nav-link fw-bold link-${toggleState==="question" ? "success" : "dark" } ps-8`} aria-current="page">
             <Icon path={mdiForum} size={1} className="me-4" />
             Question
           </Link>
@@ -46,7 +46,7 @@ export default function Navbar() {
 
         <li className={`nav-item border-start border-4 border-${toggleState==="assignment" ? "success" : "light" } mb-6`} 
           onClick={() => addStyle("assignment")}>
-          <Link to="/" className={`nav-link fw-bold link-${toggleState==="assignment" ? "success" : "dark" } ps-8`} aria-current="page">
+          <Link to="/ANSWER-backstage" className={`nav-link fw-bold link-${toggleState==="assignment" ? "success" : "dark" } ps-8`} aria-current="page">
             <Icon path={mdiClipboardText} size={1} className="me-4" />
             Assignment
           </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
 
         <li className={`nav-item border-start border-4 border-${toggleState==="settings" ? "success" : "light" } mb-6`}  
           onClick={() => addStyle("settings")}>
-          <Link to="/" className={`nav-link fw-bold link-${toggleState==="settings" ? "success" : "dark" } ps-8`} aria-current="page">
+          <Link to="/ANSWER-backstage" className={`nav-link fw-bold link-${toggleState==="settings" ? "success" : "dark" } ps-8`} aria-current="page">
             <Icon path={mdiCog} size={1} className="me-4" />
             Settings
           </Link>

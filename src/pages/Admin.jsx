@@ -8,6 +8,8 @@ import { mdiMagnify, mdiBellRing, mdiArrowDown, mdiEye, mdiPencil, mdiChevronRig
 
 const Admin = () => {
 
+  const path = "https://raw.githubusercontent.com/aki168/ANSWER-backstage/main/public/images/";
+
   const [modalShow, setModalShow] = useState(false);
   const toggleModal = (e) => {
     e.preventDefault()
@@ -92,7 +94,7 @@ const Admin = () => {
           </tbody>
         </table>
 
-        <MyModal show={modalShow} onHide={toggleModal}/>
+        <MyModal show={modalShow} onHide={toggleModal} img={`${path}emir.jpeg`}/>
 
         <nav aria-label="Page navigation ">
           <ul class="pagination justify-content-end">

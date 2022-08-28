@@ -13,7 +13,7 @@ export default function App() {
           <Navbar />
           <main className="col-9">
             <Routes>
-              <Route path="/" element={<Main />}></Route>
+              <Route path="/ANSWER-backstage" element={<Main />}></Route>
               <Route path="/admin" element={<Admin />}></Route>
             </Routes>
           </main>
